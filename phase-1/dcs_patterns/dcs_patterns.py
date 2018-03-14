@@ -641,6 +641,12 @@ def get_dcs_pattern_matches(manual_cng_set):
 	ret_list=[]
 	for cur_dcs_id in dcs_key_list:
 		dcs_cng_set=dcs_cng_dict[cur_dcs_id]
+		if 3 in manual_cng_set:
+			manual_cng_set.remove(3)
+			pass
+		if 3 in dcs_cng_set:
+			dcs_cng_set.remove(3)
+			pass
 		if manual_cng_set==dcs_cng_set:
 			ret_list.append(cur_dcs_id)
 			pass
